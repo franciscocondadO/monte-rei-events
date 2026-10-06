@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Monte Rei — Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Mrs+Saint+Delafield&family=Playfair+Display:wght@500;600;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#253125; --forest-2:#2e3d2e; --mint:#AFE0AF; --sand:#EBE4CF; --sand-2:#f4f0e2;
+  --burgundy:#491818; --coral:#FF7357; --charcoal:#181715;
+  --shell:#d9d5c6; --ink:#181715;
+  --serif:"Chronicle Display","Playfair Display",Georgia,serif;
+  --sans:"Satoshi","DM Sans",system-ui,sans-serif;
+  --script:"Photograph Signature","Mrs Saint Delafield","Snell Roundhand",cursive;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--shell);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55}
+
+/* common brand bits */
+.word{display:block;width:210px;aspect-ratio:3887/589;color:var(--mint)}
+.mono{display:block;aspect-ratio:2323/1040;color:var(--mint)}
+.script{font-family:var(--script);font-size:46px;line-height:1;color:var(--sand);display:block;margin:0 0 -8px 6px;transform:translateY(4px)}
+.h1{font-family:var(--serif);font-weight:900;color:var(--mint);margin:0;line-height:1.02;letter-spacing:-.01em}
+.pat{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+
+/* page */
+.phone{width:100%;max-width:440px;margin:0 auto;background:var(--sand);border-radius:22px;overflow:hidden;box-shadow:0 22px 50px -24px rgba(0,0,0,.5)}
+.phone .head{position:relative;background:var(--forest);padding:30px 26px 28px}
+.phone .head>*:not(.pat){position:relative}
+.phone .head .word{width:150px}
+.phone .head .h1{font-size:46px;margin-top:26px}
+.phone .head .when{margin:16px 0 0;color:var(--sand);font-size:15px}
+.phone .head .when b{font-weight:500;color:var(--mint)}
+.phone .form{padding:26px 26px 32px}
+.seg{display:grid;grid-template-columns:1fr 1fr 1fr;border:1.5px solid var(--forest);border-radius:3px;overflow:hidden;margin-bottom:22px}
+.seg button{font:inherit;font-weight:500;font-size:14px;line-height:1.25;padding:12px 6px;background:transparent;border:0;color:var(--forest);cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--forest);color:var(--mint)}
+.seg button:focus-visible{outline:3px solid var(--coral);outline-offset:-3px}
+label{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;color:var(--burgundy);margin:0 0 6px}
+.field{margin-bottom:18px}
+input,textarea{width:100%;font:inherit;font-size:16px;color:var(--charcoal);background:var(--sand-2);border:1.5px solid rgba(37,49,37,.35);border-radius:3px;padding:12px 13px}
+input:focus,textarea:focus{outline:3px solid rgba(255,115,87,.5);border-color:var(--forest)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.chk{display:flex;align-items:center;gap:10px;font-size:15px;letter-spacing:0;text-transform:none;font-weight:500;color:var(--forest);margin:2px 0 16px;cursor:pointer}
+.chk input{width:20px;height:20px;accent-color:var(--forest);flex:none;padding:0}
+#plusBlock{border-top:1px solid rgba(37,49,37,.25);padding-top:18px;margin-top:4px}
+.hint{font-size:12.5px;color:#5a5646;margin-top:5px}
+.done{display:none;padding:34px 26px 38px;text-align:left}
+.done .tick{width:46px;height:46px;border-radius:50%;background:var(--forest);color:var(--mint);display:grid;place-items:center;font-size:22px;margin-bottom:16px}
+.done h2{font-family:var(--serif);font-weight:900;font-size:32px;margin:0 0 10px;color:var(--forest);line-height:1.1}
+.done p{margin:0 0 14px}
+.sum{border-top:1px solid rgba(37,49,37,.25);margin-top:18px;padding-top:14px;font-size:14px}
+.sum div{display:flex;justify-content:space-between;gap:12px;padding:3px 0}
+.sum span:first-child{color:#5a5646}
+.phone .legal{background:var(--forest);color:var(--sand);padding:18px 26px;display:flex;align-items:center;gap:14px;font-size:12px}
+.phone .legal .mono{width:48px;flex:none}
+.phone .legal p{margin:0;opacity:.75}
+
+
+@media (prefers-reduced-motion:no-preference){.panel.on{animation:fade .25s ease}@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}}
+
+.stage{padding:28px 16px 56px;display:flex;justify-content:center}
+.msg{padding:34px 26px 38px}.msg h2{font-family:var(--serif);font-weight:900;font-size:30px;margin:0 0 10px;color:var(--forest);line-height:1.1}.msg p{margin:0 0 14px}
+.btn{display:inline-block;font:inherit;font-weight:700;font-size:15px;letter-spacing:.04em;text-decoration:none;background:var(--forest);color:var(--mint);padding:15px 30px;border-radius:2px;border:0;cursor:pointer;margin-top:10px}.btn:hover{background:#1b251b}.btn:focus-visible{outline:3px solid var(--coral);outline-offset:3px}.btn.ghost{background:transparent;color:var(--forest);border:1.5px solid var(--forest)}
+.err{display:none;color:#8a1c1c;font-size:14px;margin:0 0 14px}
+.hello{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--burgundy);margin:0 0 6px}
+.lead{margin:0 0 20px;font-size:15px;color:#3b3a32}
+.btn[disabled]{opacity:.6;cursor:wait}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mono" viewBox="0 0 2323 1040">
+  
+  
+  <path d="M1526.91,990.05c-6.27,13.33-26.55,12.99-46.18,12.66-5.83-.11-11.35-.22-16.38,0-38.7,1.84-62.64,1.45-87.98,1.01-12.97-.19-26.39-.44-42.36-.35-24.16.11-42.96,0-56.67-.06-15.64-.08-25.95-.14-32.21.17-6.82.33-13.61.71-20.23,1.09-44.45,2.61-69.85,3.41-74.66-10.46-1.62-4.64-.08-9.42.44-10.99,3-9.31,11.33-13.05,18.04-16.07,2.74-1.24,5.35-2.42,7.11-3.73,8.06-6.12,9.71-22.77,4.81-48.07l-82.62-540.74-300.44,559.86c-32.96,60.29-40.51,73.06-56.76,73.06-26.39,0-43.34-40.32-53.49-64.41l-.71-1.65c-32.49-77.01-78.06-165.4-135.39-262.65l-.3-.58c-25.23-56.28-156.81-344.34-267.46-489.58-23.8-31.26-52.22-62.76-98.7-81.63-66.6-27.03-129.81-14.61-161.56-4.81L0,109.31l17.51-16.84C45.68,65.39,105.21,19.31,187.29,15c79.79-4.15,156.12,44.49,185.22,65.62,33.4,24.22,81.58,74.87,231.29,370.81,4.53,8.95,8.77,17.39,12.83,25.46,20.92,41.55,37.44,74.35,64.56,122,31.91,56.09,66.29,111.24,102.27,164.14C962.46,425.17,1130.95,107.58,1158.9,57.48c11.13-19.91,19.63-32.96,35.76-32.96,23.89,0,29.11,32.82,30.84,43.62,3.13,19.56,8.63,57.87,15.61,106.37,26.17,182.15,74.93,521.22,111.37,665.74,5.5,21.89,13.17,47.76,24.8,69.95,11.65,22.19,27.26,40.65,48.65,47.71,15.77,5.19,35.09,4.42,52.11,3.74,22.67-.91,42.24-1.7,48.87,12.06,2.39,4.97,2.39,11.23,0,16.32v.03Z"/>
+  <path d="M430.97,987.94c0,19.53-25.53,19.53-39.28,19.53-35.57,0-72.34-1.38-101.89-2.47-18.75-.69-34.91-1.29-44.75-1.29-11.43,0-30.34.68-52.25,1.51-28.42,1.04-60.63,2.25-86,2.25-7.64,0-30.89,0-30.89-19.53,0-14.5,21.16-14.5,28.09-14.5,10.97,0,20.45,0,40.9-3.68,28.56-5.11,47.66-69.74,52.61-94.21,12.92-60.15,23.88-120.49,32.68-179.46,25.37-170.04,39.33-263.73,39.61-269.19v-.77c.11-31.04,3.35-43.2,11.98-44.88,7.81-1.51,11.98,5.55,25.34,30.3,8,14.83,14.38,27.19,20.53,39.14,8.3,16.07,15.47,29.94,24.32,45.43,5.19,9.12,7.31,19.66,6.02,29.85l-7.34,58.04c-19.95,157.87-34.36,271.91-37.05,290.97-1.92,13.79-3.21,27.96-3.79,42.13-.22,5.19-.33,10.35-.33,15.82,0,17.85,12.2,29.09,37.32,34.39,20.39,4.07,39.74,6.12,57.45,6.12,24.11,0,26.72,10.14,26.72,14.5Z"/>
+  <path d="M2323,1000.9l-22.7,9.09c-48.19,19.31-96.92,29.04-145.24,29.04-11.13,0-22.21-.5-33.28-1.54-168.57-15.68-276.34-148.37-280.85-154-17.89-22.41-67.01-89.46-110.35-148.59-37.41-51-76.06-103.77-80.92-108.96-1.65-1.79-3.77-3.16-4.37-3.52-.14-.11-.28-.16-.41-.25-1.57-.82-3.22-1.43-4.92-1.79-5.23-1.07-9.29-.85-9.35-.85-6.32.36-66.6,2.61-157.85,6.04l-46.95,1.76c-6.98.25-13.05-4.7-14.18-11.56l-10.63-65.09c-.75-4.42.74-8.95,3.98-12.08,3.22-3.13,7.78-4.5,12.18-3.68,58.68,11.18,116.84,11.18,172.88.03l.41-.08c42.72-8.49,83.07-16.51,122.86-48.31,27.38-21.86,74.27-69.85,80.95-145.6.36-3.87,7.59-95.44-60.08-163.64-59.35-59.82-140.15-60.15-193.61-60.34h-2.61c-60.31,0-119.43,14.25-175.77,42.35-5.53,2.77-11.82,2.75-17.32-.05-5.5-2.83-9.24-7.94-10.22-14.04l-11.71-71.44c-1.41-8.68,3.24-17.22,11.32-20.74C1414.08,18.29,1497.09.47,1581,.03c41.25-.16,110.33-.52,190.01,32.13,48.01,19.69,113.7,46.64,158.81,118.57,51.01,81.33,41.56,166.8,35.1,199.78-24.11,123.51-123.39,187.4-164.97,209.15-.88.47-1.13,1.26-1.18,1.7-.06.44-.06,1.26.68,1.98,30.87,29.14,60.83,60.04,89.03,91.79,49.45,55.65,79.27,98.05,103.24,132.11,24.84,35.38,44.5,63.31,75.58,92.59,29.16,27.47,63.22,50.92,101.95,70.26,38.75,19.31,82.12,34.47,129.92,45.35l23.83,5.44v.02Z"/>
+</symbol>
+  <symbol id="word" viewBox="0 0 3887 589">
+  
+  
+  <path d="M639.85,490.71c6.36,47.63,13.42,69.56,34.61,76.37,20.48,6.81,34.61,7.56,43.78,7.56,6.36,0,11.3.75,11.3,5.29,0,6.05-8.47,8.32-18.36,8.32-17.66,0-115.11-2.27-143.36-4.53-16.25-1.51-20.48-3.78-20.48-8.32,0-3.78,2.83-6.05,7.77-8.32,4.23-1.51,6.36-11.34,3.53-32.51l-43.08-337.22-156.08,347.81c-16.25,35.53-19.78,42.34-26.13,42.34s-13.42-15.12-24.72-37.81c-16.95-34.78-72.74-150.46-81.22-171.64-6.36-15.88-50.85-116.44-75.56-173.14l-37.42,306.22c-1.41,13.61-2.12,23.44-2.12,35.53,0,14.37,9.18,21.18,21.19,24.19,12.72,3.03,22.6,3.78,29.66,3.78,5.65,0,10.59,1.51,10.59,5.29,0,6.81-6.36,8.32-16.95,8.32-29.66,0-61.44-2.27-74.15-2.27-13.42,0-47.31,2.27-69.92,2.27-7.06,0-12.72-1.51-12.72-8.32,0-3.78,4.24-5.29,11.3-5.29,5.65,0,10.59,0,21.19-2.27,19.78-4.54,25.42-34.03,28.95-59.74L131.38,19.66c2.12-12.85,6.36-19.66,12-19.66s9.89,3.78,19.07,23.44l192.8,426.44L547.33,18.15c5.65-12.1,9.18-18.15,15.53-18.15s10.59,7.56,12.72,23.44l64.27,467.27Z"/>
+  <path d="M677.66,295.7c0-127.19,77.63-291.57,283.75-291.57,171.07,0,277.57,107.86,277.57,278.19s-109.93,304.96-284.44,304.96c-197.18,0-276.88-159.91-276.88-291.57h0ZM1142.79,309.84c0-166.61-88.63-270-201.31-270-79.01,0-169.02,47.61-169.02,232.81,0,154.71,79.01,277.44,210.93,277.44,48.1,0,159.4-25.29,159.4-240.25Z"/>
+  <path d="M1296.22,29.4c0-14.86,2.08-25.26,8.98-25.26,7.59,0,13.8,9.66,25.54,23.03,8.28,9.66,113.2,130.75,213.98,238.45,46.94,50.51,143.58,161.2,155.32,173.09l-6.91-337.26c-.69-45.31-6.9-59.43-23.47-66.86-10.35-4.46-26.92-4.46-36.58-4.46-8.28,0-11.04-2.23-11.04-6.69,0-5.95,7.59-6.69,17.94-6.69,35.9,0,69.03,2.23,83.53,2.23,7.59,0,33.83-2.23,67.64-2.23,8.98,0,15.89.74,15.89,6.69,0,4.46-4.14,6.69-12.43,6.69-6.91,0-12.43,0-20.71,2.23-19.33,5.95-24.85,21.55-25.54,63.15-2.76,156.75-4.83,312-7.59,468.75,0,16.34-2.77,23.03-8.98,23.03-7.59,0-15.88-8.17-23.47-16.34-43.49-44.57-131.85-141.89-203.64-218.4-75.24-80.23-153.93-175.32-166.36-189.43l7.59,314.24c1.38,57.94,10.35,77.26,24.16,82.46,11.73,4.45,24.85,5.2,35.89,5.2,7.59,0,11.73,1.48,11.73,5.95,0,5.95-6.21,7.43-15.88,7.43-44.87,0-72.48-2.23-85.59-2.23-6.21,0-38.65,2.23-74.55,2.23-8.96,0-15.18-.74-15.18-7.43,0-4.46,4.14-5.95,11.04-5.95,8.98,0,21.4-.74,31.07-3.71,17.94-5.95,20.71-27.48,21.4-92.12,2.07-157.49,4.82-340.98,6.21-439.77h.01Z"/>
+  <path d="M2103.19,359.92c0,68.19,0,126.75,3.44,158.61,2.07,20.76,6.19,37.06,26.84,40.03,9.64,1.48,24.77,2.97,35.1,2.97,7.56,0,11,2.23,11,5.93,0,5.18-5.5,7.41-13.07,7.41-45.42,0-88.77-2.23-108.05-2.23-15.83,0-59.18,2.23-86.71,2.23-8.95,0-13.76-2.23-13.76-7.41,0-3.71,2.75-5.93,11.01-5.93,10.32,0,18.57-1.48,24.77-2.97,13.76-2.97,17.89-19.27,19.96-40.77,3.44-31.13,3.44-89.69,3.44-157.88V56.02c-26.15.74-68.82,2.23-102.53,2.97-39.91,1.48-56.43,5.18-66.76,21.5-6.88,11.12-10.32,20.01-11.69,25.94s-3.44,8.89-7.57,8.89c-4.81,0-6.2-3.71-6.2-11.86,0-11.86,13.08-79.31,14.45-85.24,2.07-9.64,4.13-14.09,8.26-14.09,5.51,0,12.39,7.41,29.59,8.89,19.96,2.23,46.1,3.71,68.82,3.71h272.51c22.02,0,37.17-2.23,47.49-3.71,10.32-2.23,15.83-3.71,18.58-3.71,4.81,0,5.51,4.45,5.51,15.56,0,15.56-2.07,66.71-2.07,85.98-.69,7.41-2.07,11.86-6.2,11.86-5.5,0-6.88-3.71-7.56-14.82,0-2.23-.69-5.93-.69-8.15-1.37-19.27-19.96-40.03-81.2-41.51-17.89-.74-46.11-1.48-86.71-2.23v303.89h0Z"/>
+  <path d="M2386.62,232.55c0-112.28,0-132.97-1.36-156.61-1.37-25.12-6.86-36.94-29.47-42.1-5.49-1.47-17.14-2.22-26.73-2.22-7.54,0-11.65-1.47-11.65-6.65s4.8-6.65,15.08-6.65c31.51,0,63.03,2.22,98.66,2.22,21.93,0,158.29,0,171.31-.74,13.02-1.47,23.98-2.96,29.46-4.43,3.43-.74,7.54-2.96,10.97-2.96s4.11,2.96,4.11,6.65c0,5.17-3.43,14.04-5.49,48.02-.68,7.39-2.06,39.89-3.43,48.75-.68,3.69-2.06,8.12-6.85,8.12s-6.17-4.43-6.17-13.3c0-2.96-.68-14.78-4.11-23.64-4.79-13.3-11.64-22.16-45.9-26.59-11.65-1.47-83.6-2.96-97.31-2.96-3.42,0-4.79,2.22-4.79,7.39v186.9c0,5.17.68,8.12,4.79,8.12,15.08,0,93.88,0,109.64-1.47,16.45-1.47,26.73-3.69,32.89-11.08,4.79-5.92,7.54-9.61,10.96-9.61,2.74,0,4.79,1.47,4.79,5.91s-2.74,16.25-5.48,53.92c-.68,14.78-2.74,44.33-2.74,49.49,0,5.91,0,14.04-6.17,14.04-4.8,0-6.17-8.12-6.17-11.82-.69-7.39-.69-11.82-2.75-21.43-3.42-14.77-13.02-25.86-38.37-28.81-13.02-1.47-80.85-2.22-97.3-2.22-3.42,0-4.11,2.96-4.11,7.39v58.36c0,25.12-.68,93.08,0,114.51,1.37,50.98,12.34,62.06,82.23,62.06,17.82,0,46.59,0,64.42-8.86,17.81-8.86,26.03-24.38,30.83-54.67,1.37-8.12,2.75-11.08,7.54-11.08,5.48,0,5.48,5.91,5.48,13.3,0,16.99-5.48,67.22-8.91,82-4.79,19.21-10.96,19.21-37,19.21-60.99,0-121.29-4.43-189.81-4.43-27.41,0-55.51,2.22-86.34,2.22-8.91,0-13.71-2.22-13.71-7.39,0-3.69,2.75-5.91,10.97-5.91,10.27,0,18.49-1.47,24.66-2.96,13.71-2.96,17.13-19.21,19.88-40.63,3.42-31.02,3.42-89.39,3.42-157.35v-130.02h.03Z"/>
+  <path d="M3623.9,464.51c-4.82,0-6.19,2.95-7.57,11.08-4.81,30.29-13.08,45.8-30.97,54.66-17.89,8.87-46.79,8.87-64.69,8.87-70.19,0-81.21-11.08-82.58-62.06-.69-21.43,0-89.39,0-114.51v-58.35c0-4.43.68-7.39,4.12-7.39,16.52,0,84.65.74,97.73,2.21,25.47,2.96,35.1,14.04,38.54,28.81,2.07,9.61,2.07,14.04,2.75,21.43,0,3.69,1.37,11.82,6.2,11.82,6.19,0,6.19-8.12,6.19-14.04,0-5.17,2.06-34.72,2.75-49.49,2.75-37.67,5.51-49.49,5.51-53.92s-2.07-5.91-4.82-5.91c-3.44,0-6.19,3.69-11.01,9.61-6.19,7.39-16.51,9.6-33.03,11.08-15.84,1.47-94.97,1.47-110.12,1.47-4.13,0-4.81-2.96-4.81-8.13V64.86c0-5.18,1.37-7.39,4.81-7.39,13.76,0,86.03,1.47,97.72,2.96,34.42,4.43,41.3,13.29,46.12,26.59,3.44,8.86,4.13,20.68,4.13,23.64,0,8.86,1.37,13.3,6.19,13.3s6.19-4.44,6.89-8.13c1.37-8.86,2.74-41.37,3.44-48.76,2.06-33.98,5.5-42.84,5.5-48.01,0-3.69-.69-6.65-4.13-6.65s-7.57,2.21-11.01,2.96c-5.51,1.47-16.52,2.95-29.6,4.43-13.07.74-150.03.74-172.04.74-35.79,0-67.45-2.22-99.11-2.22-10.32,0-15.14,1.48-15.14,6.65s4.13,6.65,11.71,6.65c9.62,0,21.33.74,26.83,2.22,22.72,5.17,28.22,16.99,29.6,42.11,1.37,23.64,1.37,44.33,1.37,156.61v130.01c3.31,69.48.14,122.09-3.44,157.36-1.59,15.59-3.83,33.53-14.36,38.37-17.77,8.17-47.35-26.43-64.78-47.24-33.73-40.29-84.45-103.65-149.34-195.02,69.51-60.57,90.16-110.07,90.16-164.74,0-49.49-27.53-87.17-46.81-101.21-37.15-27.33-83.27-31.77-126.62-31.77-21.34,0-73.64,2.22-97.04,2.22-14.45,0-57.82-2.22-94.29-2.22-10.32,0-15.13,1.48-15.13,6.65s4.12,6.65,11.69,6.65c9.64,0,21.34.74,26.85,2.22,22.7,5.17,28.21,16.99,29.58,42.11,1.39,23.64,1.39,44.33,1.39,156.61v130.01c0,67.97,0,126.33-3.44,157.36-2.76,21.42-6.2,37.67-19.97,40.62-6.19,1.48-14.45,2.96-24.77,2.96-8.26,0-11.01,2.22-11.01,5.91,0,5.17,4.81,7.39,13.77,7.39,27.51,0,70.88-2.22,83.96-2.22,10.32,0,61.24,2.22,101.16,2.22,8.94,0,13.77-2.22,13.77-7.39,0-3.69-2.76-5.91-8.27-5.91-8.25,0-23.4-1.47-33.71-2.96-20.65-2.95-24.79-19.21-26.85-40.62-3.44-31.03-3.44-89.39-3.44-158.1v-10.35c0-4.43,2.06-5.9,5.5-5.9l57.81,1.47c4.82,0,8.96.74,12.4,5.18,8.94,11.08,40.59,61.31,68.12,101.94,38.54,56.88,64.7,91.6,94.29,108.59,17.89,10.35,35.1,14.04,73.63,14.04h13.77c22.49,0,43.54-1.17,63.91-1.82,7.69-.24,15.27-.41,22.8-.41,68.83,0,129.39,4.43,190.64,4.43,26.15,0,32.34,0,37.16-19.21,3.44-14.78,8.95-65.01,8.95-82,0-7.39,0-13.29-5.51-13.29ZM3087.79,299.03c-12.39,9.61-21.33,12.57-48.86,12.57-17.2,0-37.85-2.22-52.3-7.39-4.83-2.22-6.2-5.18-6.2-13.3V66.33c0-5.9,1.37-8.86,6.2-10.34,6.88-2.21,19.26-2.95,36.47-2.95,40.61,0,105.29,30.29,105.29,135.19,0,60.57-19.95,94.55-40.6,110.8Z"/>
+  <path d="M3724.76,230.71c0-112.25,0-132.94-1.38-156.57-1.38-25.11-8.28-37.66-23.48-41.36-7.59-2.22-16.57-2.96-24.85-2.96-6.9,0-11.04-1.47-11.04-7.39,0-4.43,5.53-5.91,16.57-5.9,26.23,0,69.72,2.22,89.75,2.22,17.26,0,57.99-2.22,84.22-2.22,8.98,0,14.49,1.47,14.49,5.91,0,5.91-4.14,7.39-11.04,7.39s-12.43.74-20.71,2.22c-18.64,3.69-24.16,16.24-25.54,42.09-1.38,23.63-1.38,44.31-1.38,156.57v129.98c0,71.63,0,129.98,2.77,161.73,2.07,19.94,6.9,33.23,27.61,36.19,9.67,1.47,24.85,2.96,35.21,2.96,7.59,0,11.04,2.22,11.04,5.91,0,5.16-5.53,7.39-13.12,7.39-45.56,0-89.05-2.22-107.69-2.22-15.89,0-59.37,2.22-86.99,2.22-8.98,0-13.8-2.22-13.8-7.39,0-3.69,2.76-5.91,11.04-5.91,10.36,0,18.64-1.47,24.85-2.96,13.81-2.96,17.95-15.51,20.02-36.93,3.46-31.01,3.46-89.36,3.46-160.99v-129.98h-.01Z"/>
+</symbol>
+  <pattern id="mrpat" width="150" height="110" patternUnits="userSpaceOnUse" patternTransform="rotate(-16)">
+    <g style="color:#34472f;opacity:.55">
+      <svg x="14" y="10" width="64" height="29" viewBox="0 0 2323 1040"><use href="#mono" fill="currentColor"/></svg>
+      <svg x="86" y="64" width="64" height="29" viewBox="0 0 2323 1040"><use href="#mono" fill="currentColor"/></svg>
+    </g>
+  </pattern>
+</svg>
+<main class="stage">
+  <div class="phone">
+    <div class="head">
+      <svg class="pat" aria-hidden="true"><rect width="100%" height="100%" fill="url(#mrpat)"/></svg>
+      <svg class="word" role="img" aria-label="Monte Rei" viewBox="0 0 3887 589" fill="currentColor"><use href="#word"/></svg>
+      <p class="when"><b>24 October</b> · 09:00 – 16:00<br>Monte Rei Golf &amp; Country Club</p>
+    </div>
+
+    <div class="msg" id="loading"><p>Loading your invitation…</p></div>
+    <div class="msg" id="invalid" style="display:none"><h2>Link not recognised</h2><p>This link doesn't match an invitation. Please use the button in your invitation email, or reply to that email and we will help.</p></div>
+
+    <form class="form" id="rsvp" novalidate style="display:none">
+      <p class="hello" id="hello"></p>
+      <p class="lead" id="lead">Please let us know whether you will be joining us for golf and lunch, or for lunch only.</p>
+      <div class="seg" role="group" aria-label="Attendance">
+        <button type="button" id="yes" aria-pressed="true">Golf and lunch</button>
+        <button type="button" id="att" aria-pressed="false">Lunch only</button>
+        <button type="button" id="no" aria-pressed="false">I can't make it</button>
+      </div>
+      <div class="field" id="nameField"><label for="n">Full name</label><input id="n" autocomplete="name" placeholder="First Last"></div>
+      <div id="playFields">
+        <div class="field"><label for="h">Handicap</label><input id="h" inputmode="decimal" placeholder="18.4"><div class="hint">We use your handicap to balance the groups.</div></div>
+        <div class="field"><label for="g">I'd like to play with</label><input id="g" placeholder="(optional)"><div class="hint">We'll do our best to honour the request.</div></div>
+      </div>
+      <div id="plusBlock">
+        <label class="chk"><input type="checkbox" id="plus"><span>I'm bringing a guest</span></label>
+        <div id="plusFields" style="display:none">
+          <div class="field"><label for="an">Guest's name</label><input id="an" placeholder="First Last"></div>
+          <label class="chk" id="aplayRow"><input type="checkbox" id="aplay"><span>My guest will also play</span></label>
+          <div id="aplayFields" style="display:none"><div class="field"><label for="ah">Guest's handicap</label><input id="ah" inputmode="decimal" placeholder="24.0"></div></div>
+        </div>
+      </div>
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn" type="submit" style="width:100%;text-align:center" id="go">Confirm attendance</button>
+    </form>
+
+    <div class="done" id="done" role="status" aria-live="polite">
+      <div class="tick" aria-hidden="true">✓</div>
+      <h2 id="doneT"></h2><p id="doneP"></p><div class="sum" id="sum"></div>
+      <button class="btn ghost" type="button" id="back" style="margin-top:18px">Edit my answer</button>
+    </div>
+
+    <div class="legal">
+      <svg class="mono" role="img" aria-label="MR" viewBox="0 0 2323 1040" fill="currentColor"><use href="#mono"/></svg>
+      <p>Your details are used only to organise this event.</p>
+    </div>
+  </div>
+</main>
+<script>
+(function(){
+  var SB='https://sqbxyepvtmswcwmhpclh.supabase.co', KEY='sb_publishable_ph-AN25le-CJiIi5KxPEbw_JsTkS6po';
+  function $(i){return document.getElementById(i)}
+  function val(i){return $(i).value.trim()}
+  function rpc(fn,body){
+    return fetch(SB+'/rest/v1/rpc/'+fn,{method:'POST',headers:{'apikey':KEY,'Content-Type':'application/json'},body:JSON.stringify(body)})
+      .then(function(r){if(!r.ok)throw new Error('http '+r.status);return r.json()});
+  }
+  var q=new URLSearchParams(location.search), token=q.get('t');
+  if(!token){var m=location.pathname.match(/\/r\/([A-Za-z0-9]+)/);if(m)token=m[1]}
+  var form=$('rsvp'),done=$('done'),mode='joga',saved=null;
+  function show(id){['loading','invalid'].forEach(function(x){$(x).style.display=x===id?'block':'none'});}
+  function pick(m){mode=m;
+    $('yes').setAttribute('aria-pressed',m==='joga');$('att').setAttribute('aria-pressed',m==='presente');$('no').setAttribute('aria-pressed',m==='nao');
+    $('playFields').style.display=m==='joga'?'block':'none';
+    $('nameField').style.display=m==='nao'?'none':'block';
+    $('plusBlock').style.display=m==='nao'?'none':'block';
+    $('go').textContent=m==='nao'?'Send reply':'Confirm attendance';}
+  $('yes').onclick=function(){pick('joga')};$('att').onclick=function(){pick('presente')};$('no').onclick=function(){pick('nao')};
+  $('plus').onchange=function(){$('plusFields').style.display=$('plus').checked?'block':'none'};
+  $('aplay').onchange=function(){$('aplayFields').style.display=$('aplay').checked?'block':'none'};
+  function num(s){s=s.replace(',','.');return /^\+?-?\d{1,2}(\.\d)?$/.test(s)?parseFloat(s):NaN}
+  function err(m){var e=$('err');e.textContent=m;e.style.display=m?'block':'none'}
+
+  if(!token){show('invalid')}
+  else rpc('get_convidado',{p_token:token}).then(function(g){
+    if(!g){show('invalid');return}
+    saved=g;
+    $('hello').textContent='Dear '+(g.nome||'guest')+',';
+    $('n').value=g.nome_confirmado||g.nome||'';
+    if(g.rsvp&&g.rsvp!=='pendente'){
+      pick(g.rsvp==='nao'?'nao':(g.joga?'joga':'presente'));
+      if(g.handicap!=null)$('h').value=g.handicap;
+      if(g.pedido_grupo)$('g').value=g.pedido_grupo;
+      if(g.ac_nome){$('plus').checked=true;$('plusFields').style.display='block';$('an').value=g.ac_nome;
+        if(g.ac_joga){$('aplay').checked=true;$('aplayFields').style.display='block';if(g.ac_handicap!=null)$('ah').value=g.ac_handicap}}
+      $('lead').textContent='We have your reply. You can change it below until 19 October.';
+    }
+    $('loading').style.display='none';form.style.display='block';
+  }).catch(function(){
+    $('loading').innerHTML='<p>We could not load your invitation. Please check your connection and try again.</p>';
+  });
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();err('');
+    var body={p_token:token,p_participacao:mode,p_nome:val('n'),p_handicap:null,p_pedido_grupo:val('g')||null,p_ac_nome:null,p_ac_joga:false,p_ac_handicap:null};
+    if(mode!=='nao'&&!body.p_nome){err('Please enter your full name.');return}
+    if(mode==='joga'){var h=num(val('h'));if(isNaN(h)){err('Please enter your handicap, for example 18.4.');return}body.p_handicap=h}
+    if(mode!=='nao'&&$('plus').checked){
+      if(!val('an')){err("Please enter your guest's name.");return}
+      body.p_ac_nome=val('an');
+      if($('aplay').checked){var ah=num(val('ah'));if(isNaN(ah)){err("Please enter your guest's handicap.");return}body.p_ac_joga=true;body.p_ac_handicap=ah}
+    }
+    var go=$('go');go.disabled=true;
+    rpc('set_rsvp',body).then(function(r){
+      go.disabled=false;
+      if(!r||!r.ok){err('Something went wrong. Please try again or reply to your invitation email.');return}
+      var rows=[];
+      if(mode!=='nao'){rows.push(['Name',body.p_nome]);rows.push(['Participation',mode==='joga'?'Golf and lunch':'Lunch only']);
+        if(mode==='joga'){rows.push(['Handicap',String(body.p_handicap)]);if(body.p_pedido_grupo)rows.push(['Playing with',body.p_pedido_grupo])}
+        if(body.p_ac_nome){rows.push(['Guest',body.p_ac_nome+(body.p_ac_joga?' (golf and lunch)':' (lunch only)')]);if(body.p_ac_joga)rows.push(['Guest handicap',String(body.p_ac_handicap)])}}
+      var T,P;
+      if(r.rsvp==='nao'){T='Reply recorded';P="We're sorry you can't join us. Thank you for letting us know."}
+      else if(r.rsvp==='lista_espera'){T="You're on the waiting list";P='All places are currently taken. We will contact you if a place becomes available.'}
+      else{T='Attendance confirmed';P=mode==='joga'?'Thank you. Once all confirmations have been received, we will email your tee time and further details for the day.':'Thank you. We look forward to seeing you on 24 October.'}
+      $('doneT').textContent=T;$('doneP').textContent=P;
+      $('sum').innerHTML='';rows.forEach(function(x){var d=document.createElement('div'),a=document.createElement('span'),b=document.createElement('span');a.textContent=x[0];b.textContent=x[1];d.appendChild(a);d.appendChild(b);$('sum').appendChild(d)});
+      form.style.display='none';done.style.display='block';window.scrollTo({top:0});
+    }).catch(function(){go.disabled=false;err('Connection problem. Please try again.')});
+  });
+  $('back').onclick=function(){done.style.display='none';form.style.display='block'};
+})();
+</script>
+</body>
+</html>
